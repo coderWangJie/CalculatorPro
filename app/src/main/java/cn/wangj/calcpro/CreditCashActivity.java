@@ -1,13 +1,42 @@
 package cn.wangj.calcpro;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.widget.EditText;
 
-public class CreditCashActivity extends AppCompatActivity {
+import butterknife.BindView;
+
+public class CreditCashActivity extends BaseActivity {
+
+    @BindView(R.id.et_amount)
+    EditText etAmount;
+
+    @BindView(R.id.et_fee)
+    EditText etFee;
+
+//    @BindView(R.id.et_amount)
+//    EditText etAmount;
+//
+//    @BindView(R.id.et_amount)
+//    EditText etAmount;
+//
+//    @BindView(R.id.et_amount)
+//    EditText etAmount;
+//
+//    @BindView(R.id.et_amount)
+//    EditText etAmount;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_credit_cash);
+    protected int setContentResID() {
+        return R.layout.activity_credit_cash;
     }
+
+    @Override
+    protected void runOnCreate() {
+
+    }
+
+    @Override
+    protected void runOnResume() {
+
+    }
+
 }

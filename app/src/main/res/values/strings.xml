@@ -1,13 +1,20 @@
 <resources>
     <string name="app_name">CalculatorPro</string>
     <string name="RMB">¥</string>
+    <string name="PERCENT">%</string>
 
 
     <!-- 信用卡套现 -->
-    <string name="function_Credit_Cash">信用卡取现</string>
-    <string name="credit_cash_">金额</string>
+    <string name="function_Credit_Cash">信用卡套现</string>
+    <string name="lie_amount">划款金额</string>
+    <string name="lie_fee">划款费率</string>
+    <string name="lie_date">划款日期</string>
+    <string name="lie_credit_billdate">信用卡账单日</string>
+    <string name="lie_credit_deadline">信用卡还款日</string>
+    <string name="lie_choose_credit">选择我的信用卡</string>
+
 
 
     <!--  -->
-    <string name="x">宝</string>
+    <string name="x"></string>
 </resources>

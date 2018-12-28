@@ -1,13 +1,36 @@
 package cn.wangj.calcpro;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.content.Intent;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.OnClick;
+
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int setContentResID() {
+        return R.layout.activity_main;
     }
+
+    @Override
+    protected void runOnCreate() {
+
+    }
+
+    @Override
+    protected void runOnResume() {
+
+    }
+
+    @OnClick(R.id.btn_creditLie)
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_creditLie:
+                Intent intent = new Intent(this, CreditCashActivity.class);
+                startActivity(intent);
+                break;
+        }
+    }
+
 }

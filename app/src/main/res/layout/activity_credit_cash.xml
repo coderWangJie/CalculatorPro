@@ -28,12 +28,12 @@
 
                 <TextView
                     style="@style/input_name"
-                    android:text="@string/credit_cash_" />
+                    android:text="@string/lie_amount" />
 
                 <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:id="@+id/et_amount"
+                    style="@style/input_value"
+                    android:inputType="number"
                     android:hint="@string/app_name" />
 
                 <TextView
@@ -48,9 +48,10 @@
 
                 <TextView
                     style="@style/input_name"
-                    android:text="@string/credit_cash_" />
+                    android:text="@string/lie_date" />
 
                 <EditText
+                    android:id="@+id/et_fee"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
