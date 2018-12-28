@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CalculatorPro</string>
+    <string name="RMB">¥</string>
+
+
+    <!-- 信用卡套现 -->
+    <string name="function_Credit_Cash">信用卡取现</string>
+    <string name="credit_cash_">金额</string>
+
+
+    <!--  -->
+    <string name="x">宝</string>
+</resources>
