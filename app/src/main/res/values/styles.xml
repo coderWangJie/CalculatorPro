@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- 块标题 -->
     <style name="title_lies">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -15,17 +16,35 @@
         <item name="android:textColor">@color/x</item>
     </style>
 
+    <!-- 一个横向项目布局 -->
+    <style name="item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <!-- 输入项名称 -->
     <style name="input_name">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16sp</item>
     </style>
 
-    <style name="input_value">
+    <!-- 输入框 -->
+    <style name="input_editText">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/shape_input</item>
+        <item name="android:gravity">right</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:imeOptions">actionNext</item>
+    </style>
+
+    <!--  -->
+    <style name="sample">
     </style>
 
 </resources>
