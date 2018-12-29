@@ -3,6 +3,8 @@ package cn.wangj.calcpro;
 import android.content.Intent;
 import android.view.View;
 
+import java.math.BigDecimal;
+
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
@@ -31,6 +33,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(intent);
                 break;
         }
+    }
+
+    private void calculator(int amount, double fee) {
+        BigDecimal bigAmount = new BigDecimal(amount);
+        BigDecimal bigFee = new BigDecimal(fee);
+
+        bigAmount = bigAmount.multiply(bigFee);
     }
 
 }
