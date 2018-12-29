@@ -1,4 +1,4 @@
-package cn.wangj.calcpro;
+package cn.wangj.calcpro.business;
 
 import android.content.Intent;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.view.View;
 import java.math.BigDecimal;
 
 import butterknife.OnClick;
+import cn.wangj.calcpro.BaseActivity;
+import cn.wangj.calcpro.R;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 

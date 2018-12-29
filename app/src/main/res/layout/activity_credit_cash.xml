@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CreditCashActivity">
+    tools:context=".business.CreditCashActivity">
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -22,9 +22,7 @@
                 style="@style/title_lies"
                 android:text="@string/function_Credit_Cash" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <LinearLayout style="@style/item">
 
                 <TextView
                     style="@style/input_name"
@@ -32,9 +30,9 @@
 
                 <EditText
                     android:id="@+id/et_amount"
-                    style="@style/input_value"
-                    android:inputType="number"
-                    android:hint="@string/app_name" />
+                    style="@style/input_editText"
+                    android:hint="@string/lie_amount_hint"
+                    android:inputType="number" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -42,26 +40,78 @@
                     android:text="@string/RMB" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <LinearLayout style="@style/item">
 
                 <TextView
                     style="@style/input_name"
                     android:text="@string/lie_date" />
 
                 <EditText
+                    android:id="@+id/et_lieDay"
+                    style="@style/input_editText"
+                    android:hint="@string/lie_date"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/item">
+
+                <TextView
+                    style="@style/input_name"
+                    android:text="@string/lie_fee" />
+
+                <EditText
                     android:id="@+id/et_fee"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:hint="@string/app_name" />
+                    style="@style/input_editText"
+                    android:hint="@string/lie_fee_hint"
+                    android:inputType="number" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/RMB" />
+                    android:text="@string/PERCENT" />
             </LinearLayout>
+
+            <LinearLayout
+                style="@style/item"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/item">
+
+                        <TextView
+                            style="@style/input_name"
+                            android:text="@string/lie_credit_billdate" />
+
+                        <EditText
+                            style="@style/input_editText"
+                            android:hint="出账日" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/item">
+
+                        <TextView
+                            style="@style/input_name"
+                            android:text="@string/lie_credit_deadline" />
+
+                        <EditText
+                            style="@style/input_editText"
+                            android:hint="最后还款日" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_creditChoose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="从卡包中选择" />
+            </LinearLayout>
+
 
         </LinearLayout>
     </ScrollView>
