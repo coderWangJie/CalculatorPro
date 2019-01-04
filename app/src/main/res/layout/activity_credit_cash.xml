@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".business.CreditCashActivity">
+    tools:context=".business.credit.CreditCashActivity">
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -16,6 +15,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingLeft="15dp"
+            android:paddingTop="15dp"
             android:paddingRight="15dp">
 
             <TextView
@@ -46,11 +46,14 @@
                     style="@style/input_name"
                     android:text="@string/lie_date" />
 
-                <EditText
-                    android:id="@+id/et_lieDay"
-                    style="@style/input_editText"
-                    android:hint="@string/lie_date"
-                    android:inputType="number" />
+                <TextView
+                    android:id="@+id/tv_lieDay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_input"
+                    android:gravity="right"
+                    android:text="@string/todo" />
             </LinearLayout>
 
             <LinearLayout style="@style/item">
@@ -63,7 +66,7 @@
                     android:id="@+id/et_fee"
                     style="@style/input_editText"
                     android:hint="@string/lie_fee_hint"
-                    android:inputType="number" />
+                    android:inputType="numberDecimal" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -87,9 +90,13 @@
                             style="@style/input_name"
                             android:text="@string/lie_credit_billdate" />
 
-                        <EditText
+                        <TextView
+                            android:id="@+id/tv_billDay"
                             style="@style/input_editText"
-                            android:hint="出账日" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/todo" />
                     </LinearLayout>
 
                     <LinearLayout style="@style/item">
@@ -98,21 +105,28 @@
                             style="@style/input_name"
                             android:text="@string/lie_credit_deadline" />
 
-                        <EditText
+                        <TextView
+                            android:id="@+id/tv_deadLine"
                             style="@style/input_editText"
-                            android:hint="最后还款日" />
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/todo" />
                     </LinearLayout>
-
                 </LinearLayout>
 
                 <Button
                     android:id="@+id/btn_creditChoose"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="从卡包中选择" />
+                    android:text="选择" />
             </LinearLayout>
 
-
+            <Button
+                android:id="@+id/btn_calculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lie_calculate" />
         </LinearLayout>
     </ScrollView>
 

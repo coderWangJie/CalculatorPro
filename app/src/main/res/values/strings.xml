@@ -2,10 +2,14 @@
     <string name="app_name">火眼金睛</string>
     <string name="RMB">¥</string>
     <string name="PERCENT">%</string>
+    <string name="DAY">天</string>
+
+    <string name="todo">未指定</string>
 
 
     <!-- 信用卡套现 -->
     <string name="function_Credit_Cash">信用卡套现</string>
+
     <string name="lie_amount">划款金额</string>
     <string name="lie_amount_hint">输入划款金额</string>
     <string name="lie_fee">划款费率</string>
@@ -14,8 +18,72 @@
     <string name="lie_credit_billdate">信用卡账单日</string>
     <string name="lie_credit_deadline">信用卡还款日</string>
     <string name="lie_choose_credit">选择我的信用卡</string>
+    <string name="lie_calculate">立即测算</string>
+    <string name="lie_result_describe">信用卡套现成本测算</string>
+    <string name="lie_result_fee">本次扣费金额</string>
+    <string name="lie_result_amount">本次到手金额</string>
+    <string name="lie_result_days">本次可用款天数</string>
+    <string name="lie_result_interest">用款成本转换为年利率</string>
+    <string name="lie_result_again">再算</string>
+    <string name="lie_result_finish">知道了</string>
 
+    <string-array name="billDays">
+        <item>1日</item>
+        <item>2日</item>
+        <item>3日</item>
+        <item>4日</item>
+        <item>5日</item>
+        <item>6日</item>
+        <item>7日</item>
+        <item>8日</item>
+        <item>9日</item>
+        <item>10日</item>
+        <item>11日</item>
+        <item>12日</item>
+        <item>13日</item>
+        <item>14日</item>
+        <item>15日</item>
+        <item>16日</item>
+        <item>17日</item>
+        <item>18日</item>
+        <item>19日</item>
+        <item>20日</item>
+        <item>21日</item>
+        <item>22日</item>
+        <item>23日</item>
+        <item>24日</item>
+        <item>25日</item>
+        <item>26日</item>
+        <item>27日</item>
+        <item>28日</item>
+        <!--<item>每月1号</item>
+        <item>每月2号</item>
+        <item>每月3号</item>
+        <item>每月4号</item>
+        <item>每月5号</item>
+        <item>每月6号</item>
+        <item>每月7号</item>
+        <item>每月8号</item>
+        <item>每月9号</item>
+        <item>每月10号</item>
+        <item>每月11号</item>
+        <item>每月12号</item>
+        <item>每月13号</item>
+        <item>每月14号</item>
+        <item>每月15号</item>
+        <item>每月16号</item>
+        <item>每月17号</item>
+        <item>每月18号</item>
+        <item>每月19号</item>
+        <item>每月20号</item>
+        <item>每月21号</item>
+        <item>每月22号</item>
+        <item>每月23号</item>
+        <item>每月24号</item>
+        <item>每月25号</item>
+        <item>每月26号</item>
+        <item>每月27号</item>
+        <item>每月28号</item>-->
+    </string-array>
 
-    <!--  -->
-    <string name="x"></string>
 </resources>

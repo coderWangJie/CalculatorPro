@@ -1,4 +1,4 @@
-package cn.wangj.calcpro.business.credit;
+package cn.wangj.calcpro.business.cards;
 
 import cn.wangj.calcpro.BaseActivity;
 import cn.wangj.calcpro.R;

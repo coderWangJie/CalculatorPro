@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                style="@style/title_lies"
+                android:text="@string/lie_result_describe" />
+
+            <LinearLayout style="@style/item">
+
+                <TextView
+                    style="@style/input_name"
+                    android:text="@string/lie_result_fee" />
+
+                <TextView
+                    android:id="@+id/tv_fee"
+                    style="@style/result_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RMB" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/item">
+
+                <TextView
+                    style="@style/input_name"
+                    android:text="@string/lie_result_amount" />
+
+                <TextView
+                    android:id="@+id/tv_result"
+                    style="@style/result_text" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/item">
+
+                <TextView
+                    style="@style/input_name"
+                    android:text="@string/lie_result_days" />
+
+                <TextView
+                    android:id="@+id/tv_days"
+                    style="@style/result_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DAY" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/item">
+
+                <TextView
+                    style="@style/input_name"
+                    android:text="@string/lie_result_interest" />
+
+                <TextView
+                    android:id="@+id/tv_interest"
+                    style="@style/result_text" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/item">
+
+                <Button
+                    android:id="@+id/btn_tryAgain"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lie_result_again" />
+
+                <Button
+                    android:id="@+id/btn_finish"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lie_result_finish" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

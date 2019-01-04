@@ -3,23 +3,38 @@
     package="cn.wangj.calcpro">
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".business.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
         </activity>
+
         <activity
-            android:name=".business.CreditCashActivity"
+            android:name=".business.credit.CreditCashActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
-        <activity android:name=".business.credit.CardPackageActivity"></activity>
+
+        <activity
+            android:name=".business.credit.CreditCashResultActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".business.cards.CardPackageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
