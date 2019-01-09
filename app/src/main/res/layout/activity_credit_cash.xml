@@ -13,6 +13,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:orientation="vertical"
             android:paddingLeft="15dp"
             android:paddingTop="15dp"
@@ -53,7 +55,8 @@
                     android:layout_weight="1"
                     android:background="@drawable/shape_input"
                     android:gravity="right"
-                    android:text="@string/todo" />
+                    android:text="@string/todo"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <LinearLayout style="@style/item">
@@ -66,6 +69,7 @@
                     android:id="@+id/et_fee"
                     style="@style/input_editText"
                     android:hint="@string/lie_fee_hint"
+                    android:imeOptions="actionDone"
                     android:inputType="numberDecimal" />
 
                 <TextView
@@ -126,7 +130,22 @@
                 android:id="@+id/btn_calculate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
                 android:text="@string/lie_calculate" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="50dp"
+                android:orientation="vertical">
+
+                <TextView style="@style/tips_title" />
+
+                <TextView
+                    style="@style/tips"
+                    android:text="@string/tip_credit_cash" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
