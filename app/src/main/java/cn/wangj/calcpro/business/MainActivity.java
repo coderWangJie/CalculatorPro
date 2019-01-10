@@ -8,7 +8,7 @@ import cn.wangj.calcpro.BaseActivity;
 import cn.wangj.calcpro.R;
 import cn.wangj.calcpro.business.credit.CreditCashActivity;
 
-public class MainActivity extends BaseActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity {
 
 
     @Override
@@ -26,8 +26,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     @OnClick(R.id.btn_creditLie)
-    @Override
-    public void onClick(View v) {
+    public void handlerOnClick(View v) {
         Intent intent;
         switch (v.getId()) {
             case R.id.btn_creditLie:
