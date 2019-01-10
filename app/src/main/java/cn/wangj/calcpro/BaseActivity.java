@@ -1,14 +1,19 @@
 package cn.wangj.calcpro;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import butterknife.ButterKnife;
 import cn.wangj.calcpro.util.Logger;
 
 public abstract class BaseActivity extends AppCompatActivity {
     protected String TAG;
+
+    private Toast toast;
 
     protected abstract int setContentResID();
 
@@ -39,5 +44,20 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onResume();
 
         runOnResume();
+    }
+
+    /**
+     * 自定义外观Toast
+     * @param toastMsg Toast文字
+     */
+    protected void toastShort(@NonNull CharSequence toastMsg) {
+        if (toast == null) {
+            RelativeLayout view = (RelativeLayout) getLayoutInflater().inflate(R.layout.view_toast, null);
+            toast = new Toast(this);
+            toast.setView(view);
+        }
+        toast.setText(toastMsg); // R.layout.view_toast中控件ID设置为系统控件一样的ID，可以使用setText()方法，否则不能使用该方法设置文字
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.show();
     }
 }
