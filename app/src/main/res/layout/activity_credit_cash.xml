@@ -16,9 +16,7 @@
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:orientation="vertical"
-            android:paddingLeft="15dp"
-            android:paddingTop="15dp"
-            android:paddingRight="15dp">
+            android:padding="15dp">
 
             <TextView
                 style="@style/title_lies"
@@ -39,7 +37,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/RMB" />
+                    android:text="@string/RMB"
+                    android:textSize="26sp" />
             </LinearLayout>
 
             <LinearLayout style="@style/item">
@@ -50,13 +49,8 @@
 
                 <TextView
                     android:id="@+id/tv_lieDay"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/shape_input"
-                    android:gravity="right"
-                    android:text="@string/todo"
-                    android:textSize="20sp" />
+                    style="@style/input_textView"
+                    android:padding="2dp" />
             </LinearLayout>
 
             <LinearLayout style="@style/item">
@@ -75,11 +69,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/PERCENT" />
+                    android:text="@string/PERCENT"
+                    android:textColor="@color/text_todo"
+                    android:textSize="26sp" />
             </LinearLayout>
 
             <LinearLayout
-                style="@style/item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -96,11 +93,7 @@
 
                         <TextView
                             android:id="@+id/tv_billDay"
-                            style="@style/input_editText"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/todo" />
+                            style="@style/input_textView" />
                     </LinearLayout>
 
                     <LinearLayout style="@style/item">
@@ -111,27 +104,27 @@
 
                         <TextView
                             android:id="@+id/tv_deadLine"
-                            style="@style/input_editText"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/todo" />
+                            style="@style/input_textView" />
                     </LinearLayout>
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/btn_creditChoose"
+                <ImageView
+                    android:id="@+id/img_creditChoose"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="选择" />
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@null"
+                    android:src="@drawable/icon_card_package"
+                    android:visibility="gone" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/btn_calculate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
+                android:background="@drawable/selector_button"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 android:text="@string/lie_calculate" />
 
             <LinearLayout

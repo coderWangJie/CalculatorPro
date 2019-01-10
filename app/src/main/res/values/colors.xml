@@ -4,11 +4,17 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
+
+
     <color name="ic_launcher_background">#47A65E</color>
 
-    <color name="textc_tips_title">#336a8d</color>
-    <color name="textc_tips">#336a8d</color>
 
+    <color name="text_white">#dddede</color>
 
-    <color name="x">#336a8d</color>
+    <color name="text_todo">#e23d45</color>
+    <color name="text_done">#4497d6</color>
+
+    <color name="text_tips_title">#336a8d</color>
+    <color name="text_tips">#336a8d</color>
+
 </resources>

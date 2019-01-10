@@ -25,6 +25,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         TAG = getClass().getSimpleName();
+        Logger.i(TAG, TAG + ">>onCreate");
 
         if (setContentResID() > 0) {
             setContentView(setContentResID());

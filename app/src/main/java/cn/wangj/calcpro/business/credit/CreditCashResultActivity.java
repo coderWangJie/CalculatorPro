@@ -1,5 +1,6 @@
 package cn.wangj.calcpro.business.credit;
 
+import android.view.View;
 import android.widget.TextView;
 
 import java.math.BigDecimal;
@@ -7,10 +8,11 @@ import java.math.RoundingMode;
 import java.util.Calendar;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 import cn.wangj.calcpro.BaseActivity;
 import cn.wangj.calcpro.R;
 import cn.wangj.calcpro.util.Calculator;
-import cn.wangj.calcpro.util.Logger;
+import cn.wangj.calcpro.util.MoneyUtil;
 
 public class CreditCashResultActivity extends BaseActivity {
 
@@ -40,6 +42,8 @@ public class CreditCashResultActivity extends BaseActivity {
 
     @Override
     protected void runOnCreate() {
+        setTitle("测算结果");
+
         amount = Double.valueOf(getIntent().getStringExtra("amount"));
         feeRate = Double.valueOf(getIntent().getStringExtra("feeRate"));
         lieYear = getIntent().getIntExtra("lieYear", 0);
@@ -53,11 +57,11 @@ public class CreditCashResultActivity extends BaseActivity {
                 .multiply(new BigDecimal(feeRate))
                 .divide(new BigDecimal(100), 2, RoundingMode.HALF_UP);
         double fee = feeBigD.doubleValue();
-        tvFee.setText(String.valueOf(fee));
+        tvFee.setText(MoneyUtil.formatMoney2Show(fee));
 
         // 计算到手金额
         double result = new BigDecimal(amount).subtract(feeBigD).setScale(2, RoundingMode.HALF_UP).doubleValue();
-        tvResult.setText(String.valueOf(result));
+        tvResult.setText(MoneyUtil.formatMoney2Show(result));
 
         // 计算免息天数
         Calendar calendar = Calendar.getInstance();
@@ -72,21 +76,32 @@ public class CreditCashResultActivity extends BaseActivity {
                 .divide(new BigDecimal(days), 2, RoundingMode.HALF_UP);
 
         tvTrueInterest.setText(String.format("%s%%", costBigD.doubleValue()));
-
-        Logger.d(TAG, "???");
-
-
     }
 
     @Override
     protected void runOnResume() {
 
-
     }
 
-    private double x(double amount, double feeRate){
+    @OnClick({R.id.btn_tryAgain, R.id.btn_finish})
+    public void handleClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_tryAgain:
+                setResult(201);
+                finish();
+                break;
 
-        return 0;
+            case R.id.btn_finish:
+                onBackPressed();
+                break;
+        }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        setResult(202);
+        finish();
+    }
 }

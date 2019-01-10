@@ -30,8 +30,7 @@
                     style="@style/result_text" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/input_name"
                     android:text="@string/RMB" />
             </LinearLayout>
 
@@ -44,6 +43,10 @@
                 <TextView
                     android:id="@+id/tv_result"
                     style="@style/result_text" />
+
+                <TextView
+                    style="@style/input_name"
+                    android:text="@string/RMB" />
             </LinearLayout>
 
             <LinearLayout style="@style/item">
@@ -57,8 +60,7 @@
                     style="@style/result_text" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/input_name"
                     android:text="@string/DAY" />
             </LinearLayout>
 
@@ -80,13 +82,16 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@drawable/selector_button"
                     android:text="@string/lie_result_again" />
 
                 <Button
                     android:id="@+id/btn_finish"
                     android:layout_width="0dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@drawable/selector_button"
                     android:text="@string/lie_result_finish" />
             </LinearLayout>
 

@@ -13,21 +13,23 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">@color/x</item>
+        <item name="android:textColor">#336a8d</item>
     </style>
 
     <!-- 一个横向项目布局 -->
     <style name="item">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingTop">6dp</item>
-        <item name="android:paddingBottom">6dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
     </style>
 
     <!-- 输入项名称 -->
     <style name="input_name">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingRight">10dp</item>
         <item name="android:textSize">18sp</item>
     </style>
 
@@ -37,18 +39,36 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
         <item name="android:background">@drawable/shape_input</item>
         <item name="android:gravity">right</item>
         <item name="android:maxLines">1</item>
         <item name="android:imeOptions">actionNext</item>
+        <item name="android:textColorHint">@color/text_todo</item><!--hint文字默认红色-->
+        <item name="android:textColor">@color/text_done</item>
     </style>
 
-    <!-- 结果显示框 -->
+    <!-- 和上边输入框外观一样，但用选择方式代替输入，未选择时红字显示“未指定” -->
+    <style name="input_textView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:background">@drawable/shape_input</item>
+        <item name="android:gravity">right</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/text_todo</item>
+        <item name="android:text">@string/todo</item>
+    </style>
+
+    <!-- 结果显示文字 -->
     <style name="result_text">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:maxLines">1</item>
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">25sp</item>
         <item name="android:textColor">#fa4254</item>
     </style>
 
@@ -57,7 +77,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">@color/textc_tips_title</item>
+        <item name="android:textColor">@color/text_tips_title</item>
         <item name="android:text">@string/tip_title</item>
     </style>
 
@@ -66,11 +86,10 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/textc_tips_title</item>
+        <item name="android:textColor">@color/text_tips_title</item>
     </style>
 
     <!--  -->
-    <style name="sample">
-    </style>
+    <style name="sample"></style>
 
 </resources>

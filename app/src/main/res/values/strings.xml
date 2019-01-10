@@ -9,28 +9,28 @@
     <!-- 提示 -->
     <string name="tip_title">温馨提示：</string>
 
-    <string name="tip_credit_cash">信用卡套现</string>
+    <string name="tip_credit_cash">\t\t\t\t1.非法使用信用卡套现属于违法行为;\n\t\t\t\t2.</string>
 
 
-    <!-- 信用卡套现 -->
-    <string name="function_Credit_Cash">信用卡套现</string>
+    <!-- 信用卡提现 -->
+    <string name="function_Credit_Cash">信用卡提现</string>
 
     <string name="lie_amount">划款金额</string>
     <string name="lie_amount_hint">输入划款金额</string>
+    <string name="lie_date">计划划款日期</string>
     <string name="lie_fee">划款费率</string>
     <string name="lie_fee_hint">输入划款费率</string>
-    <string name="lie_date">划款日期</string>
     <string name="lie_credit_billdate">信用卡账单日</string>
-    <string name="lie_credit_deadline">信用卡还款日</string>
-    <string name="lie_choose_credit">选择我的信用卡</string>
-    <string name="lie_calculate">立即测算</string>
-    <string name="lie_result_describe">信用卡套现成本测算</string>
+    <string name="lie_credit_deadline">信用卡最后还款日</string>
+    <string name="lie_choose_credit"></string>
+    <string name="lie_calculate">开启火眼金睛</string>
+    <string name="lie_result_describe">信用卡提现成本测算</string>
     <string name="lie_result_fee">本次扣费金额</string>
     <string name="lie_result_amount">本次到手金额</string>
     <string name="lie_result_days">本次可用款天数</string>
     <string name="lie_result_interest">用款成本转换为年利率</string>
-    <string name="lie_result_again">再算</string>
-    <string name="lie_result_finish">知道了</string>
+    <string name="lie_result_again">有本事你再变</string>
+    <string name="lie_result_finish">已经看清</string>
 
     <string-array name="billDays">
         <item>1日</item>
