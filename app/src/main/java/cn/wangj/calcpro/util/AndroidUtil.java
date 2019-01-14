@@ -43,7 +43,7 @@ public class AndroidUtil {
     public static String getAppVersionName(Context context) {
         String versionName = "";
         try {
-            versionName = context.getPackageManager().getPackageInfo(context.getApplicationInfo().packageName, 0).versionName;
+            versionName = "v" + context.getPackageManager().getPackageInfo(context.getApplicationInfo().packageName, 0).versionName;
         } catch (PackageManager.NameNotFoundException e) {
             Logger.e(TAG, "getAppVersionName: " + e.toString());
         }

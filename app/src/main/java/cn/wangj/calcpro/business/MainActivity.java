@@ -18,6 +18,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void runOnCreate() {
+
     }
 
     @Override
@@ -25,7 +26,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick(R.id.btn_creditLie)
+    @OnClick({R.id.btn_creditLie, R.id.btn_trivia, R.id.btn_about})
     public void handlerOnClick(View v) {
         Intent intent;
         switch (v.getId()) {
@@ -36,6 +37,11 @@ public class MainActivity extends BaseActivity {
 
             case R.id.btn_trivia:
                 intent = null;
+                break;
+
+            case R.id.btn_about:
+                intent = new Intent(this, AppInfoActivity.class);
+                startActivity(intent);
                 break;
         }
     }

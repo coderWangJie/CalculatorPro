@@ -8,12 +8,15 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import cn.wangj.calcpro.util.Logger;
 
 public abstract class BaseActivity extends AppCompatActivity {
     protected String TAG;
 
     private Toast toast;
+
+    private Unbinder unbinder;
 
     protected abstract int setContentResID();
 
@@ -35,7 +38,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
 
         // ButterKnife注册
-        ButterKnife.bind(this);
+        unbinder = ButterKnife.bind(this);
 
         runOnCreate();
     }
@@ -60,5 +63,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         toast.setText(toastMsg); // R.layout.view_toast中控件ID设置为系统控件一样的ID，可以使用setText()方法，否则不能使用该方法设置文字
         toast.setDuration(Toast.LENGTH_SHORT);
         toast.show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        unbinder.unbind();
+        super.onDestroy();
     }
 }

@@ -19,6 +19,7 @@ public class AppInfoActivity extends BaseActivity {
 
     @Override
     protected void runOnCreate() {
+        setTitle("关于");
     }
 
     @Override
