@@ -68,11 +68,10 @@ public class CreditCashActivity extends BaseActivity {
     protected void runOnResume() {
     }
 
-    @OnClick({ R.id.tv_lieDay, R.id.tv_billDay, R.id.tv_deadLine, R.id.img_creditChoose, R.id.btn_calculate})
+    @OnClick({R.id.tv_lieDay, R.id.tv_billDay, R.id.tv_deadLine, R.id.img_creditChoose, R.id.btn_calculate})
     public void handlerClick(View v) {
         switch (v.getId()) {
             case R.id.tv_lieDay:
-                Calendar today = Calendar.getInstance();
                 DatePickerDialog dialog = new DatePickerDialog(this,
                         android.app.AlertDialog.THEME_DEVICE_DEFAULT_LIGHT,
                         new DatePickerDialog.OnDateSetListener() {
@@ -146,22 +145,27 @@ public class CreditCashActivity extends BaseActivity {
                             .setPositiveButton("已知晓", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    Intent intent = new Intent(CreditCashActivity.this, CreditCashResultActivity.class);
-                                    intent.putExtra("amount", etAmount.getText().toString());
-                                    intent.putExtra("feeRate", etFee.getText().toString());
-                                    intent.putExtra("lieYear", lieYear);
-                                    intent.putExtra("lieMonth", lieMonth);
-                                    intent.putExtra("lieDay", lieDay);
-                                    intent.putExtra("billDay", billDay);
-                                    intent.putExtra("deadLine", deadLine);
-                                    startActivityForResult(intent, 200);
+                                    gotoNext();
                                 }
-                            })
-                            .create();
+                            }).create();
                     alertDialog.show();
+                } else {
+                    gotoNext();
                 }
                 break;
         }
+    }
+
+    private void gotoNext() {
+        Intent intent = new Intent(CreditCashActivity.this, CreditCashResultActivity.class);
+        intent.putExtra("amount", etAmount.getText().toString());
+        intent.putExtra("feeRate", etFee.getText().toString());
+        intent.putExtra("lieYear", lieYear);
+        intent.putExtra("lieMonth", lieMonth);
+        intent.putExtra("lieDay", lieDay);
+        intent.putExtra("billDay", billDay);
+        intent.putExtra("deadLine", deadLine);
+        startActivityForResult(intent, 200);
     }
 
     @Override
