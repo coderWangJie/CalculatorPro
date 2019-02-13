@@ -7,6 +7,7 @@ import butterknife.OnClick;
 import cn.wangj.calcpro.BaseActivity;
 import cn.wangj.calcpro.R;
 import cn.wangj.calcpro.business.credit.CreditCashActivity;
+import cn.wangj.calcpro.business.trivia.TriviaListActivity;
 
 public class MainActivity extends BaseActivity {
 
@@ -23,7 +24,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void runOnResume() {
-
     }
 
     @OnClick({R.id.btn_creditLie, R.id.btn_trivia, R.id.btn_about})
@@ -36,7 +36,8 @@ public class MainActivity extends BaseActivity {
                 break;
 
             case R.id.btn_trivia:
-                intent = null;
+                intent = new Intent(this, TriviaListActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.btn_about:
