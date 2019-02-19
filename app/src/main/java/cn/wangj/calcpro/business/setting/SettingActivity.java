@@ -1,18 +1,18 @@
-package cn.wangj.calcpro.business.cards;
+package cn.wangj.calcpro.business.setting;
 
 import cn.wangj.calcpro.BaseActivity;
 import cn.wangj.calcpro.R;
 
-public class CardPackageActivity extends BaseActivity {
+public class SettingActivity extends BaseActivity {
 
     @Override
     protected int setContentResID() {
-        return R.layout.activity_card_package;
+        return R.layout.activity_setting;
     }
 
     @Override
     protected void runOnCreate() {
-        setTitle("我的卡包");
+        setTitle("应用设置");
     }
 
     @Override

@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import cn.wangj.calcpro.util.Logger;
+import cn.wangj.baslib.utils.Logger;
 
 public abstract class BaseActivity extends AppCompatActivity {
     protected String TAG;

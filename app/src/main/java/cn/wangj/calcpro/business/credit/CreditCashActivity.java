@@ -19,8 +19,8 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import cn.wangj.calcpro.BaseActivity;
 import cn.wangj.calcpro.R;
-import cn.wangj.calcpro.util.Logger;
-import cn.wangj.calcpro.util.StringUtil;
+import cn.wangj.baslib.utils.Logger;
+import cn.wangj.baslib.utils.StringUtil;
 
 public class CreditCashActivity extends BaseActivity {
 
@@ -55,6 +55,8 @@ public class CreditCashActivity extends BaseActivity {
 
     @Override
     protected void runOnCreate() {
+        setTitle("信用卡提现");
+
         temp = getResources().getStringArray(R.array.billDays);
 
         Calendar today = Calendar.getInstance();

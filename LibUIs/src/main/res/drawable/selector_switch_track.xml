@@ -4,7 +4,7 @@
     <item android:state_enabled="false">
         <shape>
             <!-- 轨道颜色 -->
-            <solid android:color="#ececec" />
+            <solid android:color="#e7e6e6" />
 
             <!-- 轨道角半径 -->
             <corners android:radius="12dp" />

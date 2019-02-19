@@ -7,9 +7,7 @@
     android:padding="15dp"
     tools:context=".business.trivia.TriviaListActivity">
 
-    <cn.wangj.uis.switchs.IOSswitch
-        android:layout_width="48dp"
-        android:layout_height="25dp" />
+
 
     <Switch
         android:layout_width="100dp"

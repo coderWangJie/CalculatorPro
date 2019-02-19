@@ -5,7 +5,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import cn.wangj.calcpro.BaseActivity;
 import cn.wangj.calcpro.R;
-import cn.wangj.calcpro.util.AndroidUtil;
+import cn.wangj.baslib.utils.AndroidUtil;
 
 public class AppInfoActivity extends BaseActivity {
 

@@ -7,9 +7,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:track">@drawable/selector_switch_track</item>
         <item name="android:thumb">@drawable/selector_switch_thumb</item>
-        <item name="android:paddingTop">8dp</item>
-        <item name="android:paddingBottom">8dp</item>
-        <item name="android:paddingLeft">12dp</item>
-        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
     </style>
 </resources>

@@ -1,4 +1,4 @@
-package cn.wangj.calcpro.util;
+package cn.wangj.baslib.utils;
 
 import android.support.annotation.NonNull;
 import android.util.Log;
@@ -86,6 +86,7 @@ public class Logger {
     }
 
     public static void w(String tag, String logMsg) {
+
         if (Log.WARN >= LOG_LEVEL) {
             Log.w(tag, logMsg);
         }

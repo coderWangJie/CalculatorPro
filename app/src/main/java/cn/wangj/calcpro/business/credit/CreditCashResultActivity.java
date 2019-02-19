@@ -12,7 +12,7 @@ import butterknife.OnClick;
 import cn.wangj.calcpro.BaseActivity;
 import cn.wangj.calcpro.R;
 import cn.wangj.calcpro.util.Calculator;
-import cn.wangj.calcpro.util.MoneyUtil;
+import cn.wangj.baslib.utils.MoneyUtil;
 
 public class CreditCashResultActivity extends BaseActivity {
 

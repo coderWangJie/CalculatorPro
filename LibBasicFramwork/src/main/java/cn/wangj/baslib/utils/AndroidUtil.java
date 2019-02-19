@@ -1,4 +1,4 @@
-package cn.wangj.calcpro.util;
+package cn.wangj.baslib.utils;
 
 import android.content.Context;
 import android.content.pm.PackageManager;

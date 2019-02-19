@@ -19,18 +19,18 @@
             android:padding="15dp">
 
             <TextView
-                style="@style/title_lies"
+                style="@style/block_title"
                 android:text="@string/function_Credit_Cash" />
 
             <LinearLayout style="@style/item">
 
                 <TextView
-                    style="@style/input_name"
+                    style="@style/item_name"
                     android:text="@string/lie_amount" />
 
                 <EditText
                     android:id="@+id/et_amount"
-                    style="@style/input_editText"
+                    style="@style/item_input_editText"
                     android:hint="@string/lie_amount_hint"
                     android:inputType="number" />
 
@@ -44,24 +44,24 @@
             <LinearLayout style="@style/item">
 
                 <TextView
-                    style="@style/input_name"
+                    style="@style/item_name"
                     android:text="@string/lie_date" />
 
                 <TextView
                     android:id="@+id/tv_lieDay"
-                    style="@style/input_textView"
+                    style="@style/item_input_textView"
                     android:padding="2dp" />
             </LinearLayout>
 
             <LinearLayout style="@style/item">
 
                 <TextView
-                    style="@style/input_name"
+                    style="@style/item_name"
                     android:text="@string/lie_fee" />
 
                 <EditText
                     android:id="@+id/et_fee"
-                    style="@style/input_editText"
+                    style="@style/item_input_editText"
                     android:hint="@string/lie_fee_hint"
                     android:imeOptions="actionDone"
                     android:inputType="numberDecimal" />
@@ -88,23 +88,23 @@
                     <LinearLayout style="@style/item">
 
                         <TextView
-                            style="@style/input_name"
+                            style="@style/item_name"
                             android:text="@string/lie_credit_billdate" />
 
                         <TextView
                             android:id="@+id/tv_billDay"
-                            style="@style/input_textView" />
+                            style="@style/item_input_textView" />
                     </LinearLayout>
 
                     <LinearLayout style="@style/item">
 
                         <TextView
-                            style="@style/input_name"
+                            style="@style/item_name"
                             android:text="@string/lie_credit_deadline" />
 
                         <TextView
                             android:id="@+id/tv_deadLine"
-                            style="@style/input_textView" />
+                            style="@style/item_input_textView" />
                     </LinearLayout>
                 </LinearLayout>
 
