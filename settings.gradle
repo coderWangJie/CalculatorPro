@@ -1,1 +1,1 @@
-include ':app', ':LibUIs', ':LibNets', ':LibBasicFramwork'
+include ':app', ':LibUIs', ':LibNets', ':LibBasicFramework'

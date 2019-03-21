@@ -30,9 +30,11 @@ public class Logger {
         Log.d("Logger", "The Logger's LOG_LEVEL has been Set: " + LOG_LEVEL);
     }
 
-    public static void d(String tag, String logMsg) {
+    public static void d(String tag, String... logMsg) {
         if (Log.DEBUG >= LOG_LEVEL) {
-            Log.d(tag, logMsg);
+            for (String item : logMsg) {
+                Log.d(tag, item);
+            }
         }
     }
 

@@ -15,13 +15,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0'
     // 依赖Module
-    implementation project(':LibBasicFramwork')
+    implementation project(':LibBasicFramework')
     implementation project(':LibUIs')
     implementation project(':LibNets')
     // constraint布局

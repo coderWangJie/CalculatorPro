@@ -5,7 +5,7 @@ import android.content.res.Configuration;
 
 public abstract class BaseApplication extends Application {
 
-    abstract void initLog();
+    protected abstract void initLog();
 
     @Override
     public void onCreate() {

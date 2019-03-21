@@ -111,7 +111,6 @@
                         android:gravity="right"
                         android:textColor="#dddf1839"
                         android:text="@string/app_conte_declaration" />
-
                 </LinearLayout>
 
                 <TextView

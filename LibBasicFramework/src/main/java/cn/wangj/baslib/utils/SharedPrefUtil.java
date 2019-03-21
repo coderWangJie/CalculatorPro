@@ -1,6 +1,6 @@
 package cn.wangj.baslib.utils;
 
-public class SharedPreferenceUtil {
+public class SharedPrefUtil {
 
     public static void put() {
 
