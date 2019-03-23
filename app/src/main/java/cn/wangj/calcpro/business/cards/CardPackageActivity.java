@@ -3,6 +3,7 @@ package cn.wangj.calcpro.business.cards;
 import cn.wangj.calcpro.BaseActivity;
 import cn.wangj.calcpro.R;
 
+
 public class CardPackageActivity extends BaseActivity {
 
     @Override
@@ -17,6 +18,7 @@ public class CardPackageActivity extends BaseActivity {
 
     @Override
     protected void runOnResume() {
+        int type = getIntent().getIntExtra(Type.TypeName, -1);
 
     }
 

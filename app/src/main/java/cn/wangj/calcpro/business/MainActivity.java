@@ -7,6 +7,7 @@ import butterknife.OnClick;
 import cn.wangj.calcpro.BaseActivity;
 import cn.wangj.calcpro.R;
 import cn.wangj.calcpro.business.cards.CardPackageActivity;
+import cn.wangj.calcpro.business.cards.Type;
 import cn.wangj.calcpro.business.credit.CreditCashActivity;
 import cn.wangj.calcpro.business.setting.SettingActivity;
 import cn.wangj.calcpro.business.trivia.TriviaListActivity;
@@ -39,6 +40,7 @@ public class MainActivity extends BaseActivity {
 
             case R.id.btn_cardPackage:
                 intent = new Intent(this, CardPackageActivity.class);
+                intent.putExtra(Type.TypeName, Type.Normal);
                 startActivity(intent);
                 break;
 
