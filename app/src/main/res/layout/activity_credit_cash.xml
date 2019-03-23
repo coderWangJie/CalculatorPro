@@ -115,7 +115,7 @@
                     android:layout_gravity="center_vertical"
                     android:contentDescription="@null"
                     android:src="@drawable/icon_card_package"
-                    android:visibility="gone" />
+                    android:visibility="visible" />
             </LinearLayout>
 
             <Button

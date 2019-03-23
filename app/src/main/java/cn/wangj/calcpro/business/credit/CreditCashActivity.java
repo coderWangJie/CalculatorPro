@@ -21,6 +21,7 @@ import cn.wangj.calcpro.BaseActivity;
 import cn.wangj.calcpro.R;
 import cn.wangj.baslib.utils.Logger;
 import cn.wangj.baslib.utils.StringUtil;
+import cn.wangj.calcpro.business.cards.CardPackageActivity;
 
 public class CreditCashActivity extends BaseActivity {
 
@@ -47,6 +48,9 @@ public class CreditCashActivity extends BaseActivity {
     private String[] temp;
     private int lieYear, lieMonth, lieDay; // 记录选择的刷卡日期
     private int billDay, deadLine; // 账单日、最后还款日
+
+    public static int REQUEST_CHOOSE_CARD = 100;
+    public static int REQUEST_LOOK_RESULT = 200;
 
     @Override
     protected int setContentResID() {
@@ -111,7 +115,9 @@ public class CreditCashActivity extends BaseActivity {
                 break;
 
             case R.id.img_creditChoose:
-                toastShort("正在开发中...请稍作等待！");
+//                toastShort("正在开发中...请稍作等待！");
+                Intent intent = new Intent(this, CardPackageActivity.class);
+                startActivityForResult(intent, REQUEST_CHOOSE_CARD);
                 break;
 
             case R.id.btn_calculate:
@@ -167,16 +173,22 @@ public class CreditCashActivity extends BaseActivity {
         intent.putExtra("lieDay", lieDay);
         intent.putExtra("billDay", billDay);
         intent.putExtra("deadLine", deadLine);
-        startActivityForResult(intent, 200);
+        startActivityForResult(intent, REQUEST_LOOK_RESULT);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 200) {
-            if (resultCode == 201) {
+        if (requestCode == REQUEST_CHOOSE_CARD) {  // 从卡包选择卡片
+            if (resultCode == CardPackageActivity.RESULT_OK) {  // 选好一张卡
+
+            } else if (resultCode == CardPackageActivity.RESULT_CANCELED) { // 没选中卡
+
+            }
+        } else if (requestCode == REQUEST_LOOK_RESULT) { // 结果查看后的处理
+            if (resultCode == CreditCashResultActivity.RESULT_OK) { // 再算一次
                 Logger.d(TAG, "!!!");
-            } else {
+            } else if (resultCode == CreditCashResultActivity.RESULT_CANCELED) {  // 完成
                 finish();
             }
         }

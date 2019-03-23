@@ -87,11 +87,13 @@ public class CreditCashResultActivity extends BaseActivity {
     public void handleClick(View view) {
         switch (view.getId()) {
             case R.id.btn_tryAgain:
-                setResult(201);
+                // 再算一次
+                setResult(RESULT_OK);
                 finish();
                 break;
 
             case R.id.btn_finish:
+                // 完成
                 onBackPressed();
                 break;
         }
@@ -101,7 +103,7 @@ public class CreditCashResultActivity extends BaseActivity {
     public void onBackPressed() {
         super.onBackPressed();
 
-        setResult(202);
+        setResult(RESULT_CANCELED);
         finish();
     }
 }

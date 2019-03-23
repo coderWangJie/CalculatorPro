@@ -13,6 +13,12 @@
         android:text="@string/function_Credit_Cash" />
 
     <Button
+        android:id="@+id/btn_cardPackage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我的卡包" />
+
+    <Button
         android:id="@+id/btn_trivia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
