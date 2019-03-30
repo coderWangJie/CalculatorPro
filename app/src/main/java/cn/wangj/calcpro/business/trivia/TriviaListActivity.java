@@ -7,7 +7,7 @@ public class TriviaListActivity extends BaseActivity {
     @Override
     protected int setContentResID() {
 //        return R.layout.activity_trivia_list;
-        return R.layout.nbcb_sms;
+        return R.layout.test_nbcb_sms;
     }
 
     @Override
