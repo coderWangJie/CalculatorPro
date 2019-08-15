@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import cn.wangj.baslib.utils.Logger;
+import cn.wangj.baslib.utils.LogUtil;
 
 public abstract class BaseActivity extends AppCompatActivity {
     protected String TAG;
@@ -28,12 +28,12 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         TAG = getClass().getSimpleName();
-        Logger.i(TAG, TAG + ">>onCreate");
+        LogUtil.i(TAG, ">>onCreate");
 
         if (setContentResID() > 0) {
             setContentView(setContentResID());
         } else {
-            Logger.e(TAG, "This page have not set content layout-resource!");
+            LogUtil.e(TAG, "This page have not set content layout-resource!");
             setContentView(R.layout.layout_null);
         }
 

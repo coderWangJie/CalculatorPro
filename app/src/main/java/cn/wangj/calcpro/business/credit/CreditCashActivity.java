@@ -17,9 +17,9 @@ import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import cn.wangj.baslib.utils.LogUtil;
 import cn.wangj.calcpro.BaseActivity;
 import cn.wangj.calcpro.R;
-import cn.wangj.baslib.utils.Logger;
 import cn.wangj.baslib.utils.StringUtil;
 import cn.wangj.calcpro.business.cards.CardPackageActivity;
 
@@ -187,7 +187,7 @@ public class CreditCashActivity extends BaseActivity {
             }
         } else if (requestCode == REQUEST_LOOK_RESULT) { // 结果查看后的处理
             if (resultCode == CreditCashResultActivity.RESULT_OK) { // 再算一次
-                Logger.d(TAG, "!!!");
+                LogUtil.d(TAG, "!!!");
             } else if (resultCode == CreditCashResultActivity.RESULT_CANCELED) {  // 完成
                 finish();
             }

@@ -9,13 +9,13 @@ public class AndroidUtil {
 
     // 获取系统信息：SDK_INT，SDK，BRAND，MODEL
     public static void printSysInfo() {
-        Logger.d(TAG, "RELEASE:" + Build.VERSION.RELEASE);  // Android Version
-        Logger.d(TAG, "SDK_INT:" + Build.VERSION.SDK_INT);  // Android API Level
-        Logger.d(TAG, "BRAND:" + Build.BRAND);   // Device Brand
-        Logger.d(TAG, "MODEL:" + Build.MODEL);   // Device Model
-        Logger.d(TAG, "INCREMENTAL:" + Build.VERSION.INCREMENTAL);  // UI Model
-        Logger.d(TAG, "DEVICE:" + Build.DEVICE);
-        Logger.d(TAG, "DISPLAY:" + Build.DISPLAY);
+        LogUtil.d(TAG, "RELEASE:" + Build.VERSION.RELEASE);  // Android Version
+        LogUtil.d(TAG, "SDK_INT:" + Build.VERSION.SDK_INT);  // Android API Level
+        LogUtil.d(TAG, "BRAND:" + Build.BRAND);   // Device Brand
+        LogUtil.d(TAG, "MODEL:" + Build.MODEL);   // Device Model
+        LogUtil.d(TAG, "INCREMENTAL:" + Build.VERSION.INCREMENTAL);  // UI Model
+        LogUtil.d(TAG, "DEVICE:" + Build.DEVICE);
+        LogUtil.d(TAG, "DISPLAY:" + Build.DISPLAY);
     }
 
     /**
@@ -29,9 +29,9 @@ public class AndroidUtil {
             versionCode = context.getPackageManager().getPackageInfo(
                     context.getApplicationInfo().packageName, 0).versionCode;
         } catch (PackageManager.NameNotFoundException e) {
-            Logger.e(TAG, "getAppVersionCode: " + e.toString());
+            LogUtil.e(TAG, "getAppVersionCode: " + e.toString());
         }
-        Logger.d(TAG, "AppVersionCode = " + versionCode);
+        LogUtil.d(TAG, "AppVersionCode = " + versionCode);
         return versionCode;
     }
 
@@ -45,9 +45,9 @@ public class AndroidUtil {
         try {
             versionName = "v" + context.getPackageManager().getPackageInfo(context.getApplicationInfo().packageName, 0).versionName;
         } catch (PackageManager.NameNotFoundException e) {
-            Logger.e(TAG, "getAppVersionName: " + e.toString());
+            LogUtil.e(TAG, "getAppVersionName: " + e.toString());
         }
-        Logger.d(TAG, "AppVersionName = " + versionName);
+        LogUtil.d(TAG, "AppVersionName = " + versionName);
         return versionName;
     }
 }

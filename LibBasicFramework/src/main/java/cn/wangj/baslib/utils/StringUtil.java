@@ -15,7 +15,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringUtil {
-    private static String TAG = Logger.class.getSimpleName();
+    private static String TAG = LogUtil.class.getSimpleName();
 
     public static boolean isEmpty(CharSequence charSequence) {
         return TextUtils.isEmpty(charSequence);
@@ -112,7 +112,7 @@ public class StringUtil {
                 return errorInfo;
             }
         } catch (NumberFormatException | ParseException e) {
-            Logger.excep(TAG, e);
+            LogUtil.excep(TAG, e);
         }
         if (Integer.parseInt(strMonth) > 12 || Integer.parseInt(strMonth) == 0) {
             errorInfo = "身份证月份无效";
