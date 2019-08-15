@@ -11,23 +11,23 @@ import java.util.Set;
 /**
  * The util of Log
  */
-public class Logger {
+public class LogUtil {
 
     /**
      * The min-level LogUtil will show on Logcat.
-     * you can change it by {@link Logger#setLogLevel(int)}
+     * you can change it by {@link LogUtil#setLogLevel(int)}
      */
-    private static int LOG_LEVEL;
+    private static int LOG_LEVEL = Log.DEBUG;
 
 
     /**
-     * change {@link #LOG_LEVEL} of Logger Util.
+     * change {@link #LOG_LEVEL} of LogUtil Util.
      *
      * @param newLevel int new-level
      */
     public static void setLogLevel(int newLevel) {
         LOG_LEVEL = newLevel;
-        Log.d("Logger", "The Logger's LOG_LEVEL has been Set: " + LOG_LEVEL);
+        Log.d("LogUtil", "The LogUtil's LOG_LEVEL has been Set: " + LOG_LEVEL);
     }
 
     public static void d(String tag, String... logMsg) {

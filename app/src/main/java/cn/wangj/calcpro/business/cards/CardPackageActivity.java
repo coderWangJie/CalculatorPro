@@ -1,16 +1,25 @@
 package cn.wangj.calcpro.business.cards;
 
-import android.support.v7.widget.RecyclerView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.ViewPager;
 
 import butterknife.BindView;
 import cn.wangj.calcpro.BaseActivity;
 import cn.wangj.calcpro.R;
 
-
+/**
+ * 卡包
+ */
 public class CardPackageActivity extends BaseActivity {
 
-    @BindView(R.id.recycleView)
-    RecyclerView recyclerView;
+    @BindView(R.id.tabLayout)
+    TabLayout tabLayout;
+
+    @BindView(R.id.viewPage)
+    ViewPager viewPager;
+
+    FragmentManager fragmentManager;
 
     @Override
     protected int setContentResID() {
@@ -20,6 +29,8 @@ public class CardPackageActivity extends BaseActivity {
     @Override
     protected void runOnCreate() {
         setTitle("我的卡包");
+
+        fragmentManager = getSupportFragmentManager();
     }
 
     @Override
@@ -35,8 +46,6 @@ public class CardPackageActivity extends BaseActivity {
         } else if (mode == CardPkgOpenMode.ChooseCredit) {
 
         }
-
-        recyclerView.setAdapter(null);
     }
 
 }

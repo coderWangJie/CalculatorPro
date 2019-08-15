@@ -31,7 +31,7 @@ public class MoneyUtil {
      */
     public static String formatMoney2Show(String moneyStr) {
         if (StringUtil.isEmpty(moneyStr)) {
-            Logger.e(TAG, "the parameter of method formatMoney2Show(String moneyStr) is null");
+            LogUtil.e(TAG, "the parameter of method formatMoney2Show(String moneyStr) is null");
             return "--";
         }
 
@@ -49,7 +49,7 @@ public class MoneyUtil {
      */
     public static String formatMoney2Trans(String moneyStr) {
         if (StringUtil.isEmpty(moneyStr)) {
-            Logger.e(TAG, "the parameter of method formatMoney2Trans(String moneyStr) is null");
+            LogUtil.e(TAG, "the parameter of method formatMoney2Trans(String moneyStr) is null");
             return "--";
         }
 
@@ -79,7 +79,7 @@ public class MoneyUtil {
      */
     public static double getMoneyValue(String stringStr) {
         if (StringUtil.isEmpty(stringStr)) {
-            Logger.e(TAG, "the money String is null or ''");
+            LogUtil.e(TAG, "the money String is null or ''");
             return 0;
         }
 
@@ -235,7 +235,7 @@ public class MoneyUtil {
                 prefix.append(CHINESE_MONEY_UNIT[3]); // 如果整数部分存在,则有圆的字样
             return prefix.append(suffix).toString(); // 返回正确表示
         } catch (Exception e) {
-            Logger.e(TAG, e.getMessage());
+            LogUtil.e(TAG, e.getMessage());
             return "input error";
         }
     }
